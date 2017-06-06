@@ -13,8 +13,8 @@ module.exports = (req, res) => {
     .then(user => {
       const code = (Math.floor((Math.random() * 8999 + 1000)))
 
-      twilio.message.create({
-        to: phone,
+      twilio.messages.create({
+        to: '+' + phone,
         from: number,
         body: `Your code is ${code}`,
       }, (err) => {
