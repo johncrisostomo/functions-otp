@@ -29,6 +29,6 @@ module.exports = (req, res) => {
       });
     })
     .catch(err => {
-      res.status(422).send({ error: 'User not found' });
+      res.status(422).send({ error: err });
     });
 };
